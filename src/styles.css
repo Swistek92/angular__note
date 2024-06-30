@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.lightMode {
+  background-color: antiquewhite;
+  color: black;
+}
+.darkMode {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
