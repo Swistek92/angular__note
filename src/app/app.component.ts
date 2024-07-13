@@ -1,5 +1,16 @@
-import { Component, signal } from '@angular/core';
+import {
+  Component,
+  signal,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Host,
+  HostBinding,
+  HostListener,
+  AfterViewInit,
+} from '@angular/core';
 
+export type Courses = { id: number; name: string }[];
 interface empInferface {
   id: number;
   name: string;
@@ -13,16 +24,53 @@ type ColorMode = 'lightMode' | 'darkMode';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  constructor() {
-    console.log('calling constructor');
-  }
-  ngOnInit(): void {
-    console.log('calling on init');
-
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-  }
-
+  // @ViewChild('colorInput') colorInput!: ElementRef;
+  // @HostBinding('style.backgroundColor') selectedColor!: string;
+  // @HostListener('input', ['$event.target.value']) onColorChange(color: string) {
+  //   this.selectedColor = color;
+  // }
+  // ngAfterViewInit(): void {
+  //   if (this.colorInput.nativeElement.value) {
+  //     this.selectedColor = this.colorInput.nativeElement.value!;
+  //   }
+  // }
+  // randomMsg: string = 'aaaaaaaaaa';
+  // courses: Courses = [
+  //   { id: 1, name: 'javascript' },
+  //   { id: 2, name: 'typescript' },
+  //   { id: 3, name: 'c#' },
+  //   { id: 4, name: 'java' },
+  //   { id: 5, name: 'python' },
+  // ];
+  // message: string = '';
+  // receiveEvent(event: string) {
+  //   this.message = event;
+  // }
+  // changeMs() {
+  //   this.randomMsg = this.randomMsg + '1';
+  // }
+  // counter: number = 0;
+  // inputValue: string = 'new value';
+  // updateValue() {
+  //   this.inputValue = this.inputValue + '1';
+  // }
+  // constructor() {
+  //   console.log('calling constructor');
+  // }
+  // ngOnInit(): void {
+  //   console.log('calling on init');
+  //   // this.startCounter();
+  //   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //   //Add 'implements OnInit' to the class.
+  // }
+  // startCounter() {
+  //   setInterval(() => {
+  //     if (this.counter <= 5) {
+  //       console.log(this.counter++);
+  //     }
+  //   }, 100);
+  //   return null;
+  // }
   // name = '';
   // email = '';
   // phone = '';
