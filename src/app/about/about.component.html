@@ -1,14 +1,22 @@
 <div>
   <h1>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-    quibusdam nemo ut veritatis, neque et eveniet perferendis ipsam. In dolores
-    porro quam eaque odio blanditiis. Sunt ipsa accusamus sequi dolor aliquam
-    vel!
-    <ul *ngFor="let emp of employee">
-      <li>
-        <a [routerLink]="['/about', emp.name]"> {{ emp.name }}</a>
-      </li>
+    <ul>
+      <li>id: {{ id }}</li>
+      <li>name: {{ name }}</li>
+      <li>dsc: {{ dsc }}</li>
     </ul>
+    {{ name }}
+    {{ dsc }}
+    <!-- <ul *ngFor="let emp of courses">
+      <li>
+        <a
+          [routerLink]="['/about', emp.name]"
+          [queryParams]="{ id: emp.id, name: emp.name }"
+        >
+          {{ emp.name }}</a
+        >
+      </li>
+    </ul> -->
   </h1>
-  <div></div>
+  <!-- <div>{{ employee[id].name }}</div> -->
 </div>

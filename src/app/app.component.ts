@@ -8,7 +8,10 @@ import {
   HostBinding,
   HostListener,
   AfterViewInit,
+  Inject,
 } from '@angular/core';
+import { LogMesage1Service } from './random2/services/log-mesage1.service';
+import { AdminDataService } from './random2/services/admin-data.service';
 
 export type Courses = { id: number; name: string }[];
 interface empInferface {
@@ -24,6 +27,10 @@ type ColorMode = 'lightMode' | 'darkMode';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  constructor(public getAdmin: AdminDataService) {
+    // this.logger.log();
+  }
+
   // @ViewChild('colorInput') colorInput!: ElementRef;
   // @HostBinding('style.backgroundColor') selectedColor!: string;
   // @HostListener('input', ['$event.target.value']) onColorChange(color: string) {

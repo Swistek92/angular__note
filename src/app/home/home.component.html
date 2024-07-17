@@ -11,8 +11,45 @@
     </p>
     <ul>
       <li><a href="#" routerLink="/home/">home</a></li>
-      <li><a href="#" routerLink="/home/child1">child1</a></li>
-      <li><a href="#" routerLink="/home/child2">child2</a></li>
+      <li>
+        <a
+          href="#"
+          routerLink="/about"
+          [queryParams]="{
+            id: '1',
+            name: 'html',
+            dsc: 'qqqqqqqq',
+            price: 555
+          }"
+          >html</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          routerLink="/about"
+          [queryParams]="{
+            id: '2',
+            name: 'css',
+            dsc: 'qqqqqqqq',
+            price: 555
+          }"
+          >css</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          routerLink="/about"
+          [queryParams]="{
+            id: '3',
+            name: 'js',
+            dsc: 'qqqqqqqq',
+            price: 555
+          }"
+          >js</a
+        >
+      </li>
     </ul>
   </div>
 </section>
