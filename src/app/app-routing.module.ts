@@ -9,15 +9,26 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ChildComponent } from './child/child.component';
 import { Child2Component } from './child2/child2.component';
 import { FormsComponent } from './forms/forms.component';
+import { AuthGuard } from './guard/auth.guard';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { authenticatiGuard } from './guard/authenticati.guard';
 // import { AdminModule } from './admin/admin.module';
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivateChild: [AuthGuard],
     children: [
       { path: 'child1', component: ChildComponent },
       { path: 'child2', component: Child2Component },
     ],
+  },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [authenticatiGuard],
   },
   { path: 'about/:id', component: AboutComponent },
   { path: 'news', component: NewsComponent },

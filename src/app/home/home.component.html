@@ -1,6 +1,16 @@
 <section>
   <div>
     <h2>Home</h2>
+    {{ clicked() }}
+    <ul>
+      <li><a href="#" routerLink="/home/child1">Child 1</a></li>
+      <li><a href="#" routerLink="/home/child2">Child 2</a></li>
+      <li><a href="#" routerLink="/home/">home</a></li>
+    </ul>
+
+    <button (click)="enableRoutes()">click</button>
+    <router-outlet></router-outlet>
+
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus est
       iusto tempore, ad quia repellat deleniti incidunt neque animi voluptatem
@@ -53,4 +63,3 @@
     </ul>
   </div>
 </section>
-<router-outlet></router-outlet>

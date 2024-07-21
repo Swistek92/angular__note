@@ -7,7 +7,7 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
@@ -24,6 +24,10 @@ import { LogMesage2Service } from './random2/services/log-mesage2.service';
 import { ADMIN_DATA } from './ADMIN_DATA/admin-data';
 import { AdminDataService } from './random2/services/admin-data.service';
 import { FormsComponent } from './forms/forms.component';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { authenticatiGuard } from './guard/authenticati.guard';
+import { AuthService } from './services/auth.service';
 // import { AdminModule } from './admin/admin.module';
 // ng new Demo --no-standalone
 
@@ -43,9 +47,12 @@ import { FormsComponent } from './forms/forms.component';
     Random1Component,
     Random2Component,
     FormsComponent,
+    LoginComponent,
+    AdminComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [
+    AuthService,
     provideClientHydration(),
     AdminDataService,
     // { provide: LogMesage1Service, useClass: LogMesage1Service },
