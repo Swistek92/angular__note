@@ -2,6 +2,43 @@
 <!-- 
 <h1>lalal</h1>
 <h1>{{ getAdmin.getData.name }}</h1> -->
+<li>
+  <a routerLink="./first">first component</a>
+</li>
+<li>
+  <a routerLink="./second">second component</a>
+</li>
+
+<!-- @placeholder (minimum 3s) {
+<h1>PLACEHOLDER</h1>
+<h4>
+  content is getting Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Consequuntur, enim! Veritatis ratione ut vitae, dolorem quos minima, neque
+  tempore repudiandae ipsa eius officia id fugit distinctio, consequuntur
+  cupiditate. Obcaecati, consequuntur necessitatibus ad quam voluptas expedita
+  non reiciendis mollitia error perferendis dolorum laborum nihil sint eligendi
+</h4>
+} @loading (after 1s; minimum 2s) {
+<h1>LOADING</h1>
+<h1>loading component</h1>
+} @error {
+<h1>ERROR</h1>
+} -->
+
+<div>
+  <div>
+    <button #showContent>show content</button>
+  </div>
+
+  @defer ( on interaction(showContent) ) {
+  <!-- @defer ( on viewport(showContent) ) { -->
+  <h1>DEFER ZALADOWANY</h1>
+  <app-random1></app-random1>
+  <h1>DEFER ZALADOWANY</h1>
+  }@placeholder (minimum 800ms) {
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, aut.</p>
+  }
+</div>
 <router-outlet> </router-outlet>
 <!-- <router-outlet></router-outlet> -->
 <!-- <div>

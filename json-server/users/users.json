@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 200,
+      "name": "xyz",
+      "emial": "asdas@ads.pl"
+    },
+    {
+      "id": 202,
+      "name": "xyz",
+      "emial": "asdas@ads.pl"
+    }
+  ]
+}

@@ -28,8 +28,16 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { authenticatiGuard } from './guard/authenticati.guard';
 import { AuthService } from './services/auth.service';
+import { FirstModule } from './first/first.module';
+import { UsersComponent } from './users/users.component';
 // import { AdminModule } from './admin/admin.module';
 // ng new Demo --no-standalone
+import {
+  HttpClientModule,
+  provideHttpClient,
+  withFetch,
+} from '@angular/common/http';
+import { AsyncComponent } from './async/async.component';
 
 @NgModule({
   declarations: [
@@ -49,12 +57,22 @@ import { AuthService } from './services/auth.service';
     FormsComponent,
     LoginComponent,
     AdminComponent,
+    AsyncComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule, // Dodano HttpClientModule
+    FormsModule,
+    ReactiveFormsModule,
+    FirstModule,
+    UsersComponent,
+  ],
   providers: [
     AuthService,
     provideClientHydration(),
     AdminDataService,
+    provideHttpClient(withFetch()), // Konfiguracja provideHttpClient z withFetch
     // { provide: LogMesage1Service, useClass: LogMesage1Service },
     { provide: 'LOG_MSG1', useClass: LogMesage1Service },
     { provide: 'LOG_MSG2', useClass: LogMesage2Service },

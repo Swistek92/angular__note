@@ -12,6 +12,7 @@ import {
 } from '@angular/core';
 import { LogMesage1Service } from './random2/services/log-mesage1.service';
 import { AdminDataService } from './random2/services/admin-data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 export type Courses = { id: number; name: string }[];
 interface empInferface {

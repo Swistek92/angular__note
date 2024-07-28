@@ -1,0 +1,13 @@
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Klasa animacji */
+.scale-up {
+  animation: scaleUp 1s ease-in-out;
+}
