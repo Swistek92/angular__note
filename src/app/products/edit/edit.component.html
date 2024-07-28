@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>edit produts</h1>
+  <form>
+    <div class="mb-3">
+      <label for="productName">Name</label>
+      <input
+        type="text"
+        name="productName"
+        class="form-control"
+        id="productName"
+        [(ngModel)]="editProducts.name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="productPrice">Price</label>
+      <input
+        type="number"
+        name="productPrice"
+        class="form-control"
+        id="productPrice"
+        [(ngModel)]="editProducts.price"
+      />
+    </div>
+    <button type="button" class="btn btn-primary" (click)="updateProduct()">
+      edit
+    </button>
+  </form>
+</div>

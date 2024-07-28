@@ -38,6 +38,8 @@ import {
   withFetch,
 } from '@angular/common/http';
 import { AsyncComponent } from './async/async.component';
+import { ProductsModule } from './products/products.module';
+import { ProductsService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,7 @@ import { AsyncComponent } from './async/async.component';
     AsyncComponent,
   ],
   imports: [
+    ProductsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, // Dodano HttpClientModule
@@ -69,6 +72,7 @@ import { AsyncComponent } from './async/async.component';
     UsersComponent,
   ],
   providers: [
+    ProductsService,
     AuthService,
     provideClientHydration(),
     AdminDataService,

@@ -34,9 +34,13 @@ const routes: Routes = [
   { path: 'users', component: UsersComponent },
   {
     path: 'second',
-    // component: SecondComponent,
     loadChildren: () =>
       import('./second/second.module').then((m) => m.SecondModule),
+  },
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./products/products.module').then((m) => m.ProductsModule),
   },
   {
     path: 'home',

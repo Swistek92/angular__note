@@ -1,0 +1,27 @@
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label for="productName">Name</label>
+      <input
+        type="text"
+        name="productName"
+        class="form-control"
+        id="productName"
+        [(ngModel)]="newProductsForm.name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="productPrice">Price</label>
+      <input
+        type="number"
+        name="productPrice"
+        class="form-control"
+        id="productPrice"
+        [(ngModel)]="newProductsForm.price"
+      />
+    </div>
+    <button type="button" class="btn btn-primary" (click)="createProduct()">
+      create
+    </button>
+  </form>
+</div>

@@ -1,14 +1,9 @@
 {
-  "users": [
+  "products": [
     {
-      "id": 200,
-      "name": "xyz",
-      "emial": "asdas@ads.pl"
-    },
-    {
-      "id": 202,
-      "name": "xyz",
-      "emial": "asdas@ads.pl"
+      "id": "704701",
+      "name": "asdas1231",
+      "price": 123123
     }
   ]
 }
