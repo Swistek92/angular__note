@@ -23,6 +23,8 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { UsersComponent } from './users/users.component';
 import { AsyncComponent } from './async/async.component';
+import { SingalsComponent } from './singals/singals.component';
+import { CartComponent } from './cart/cart.component';
 // import { AdminModule } from './admin/admin.module';
 const routes: Routes = [
   {
@@ -60,6 +62,8 @@ const routes: Routes = [
   },
   { path: 'about/:id', component: AboutComponent },
   { path: 'news', component: NewsComponent },
+  { path: 'signals', component: SingalsComponent },
+  { path: 'cart', component: CartComponent },
   { path: 'contact', component: ContactsComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'about', component: AboutComponent },

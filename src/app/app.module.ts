@@ -40,6 +40,8 @@ import {
 import { AsyncComponent } from './async/async.component';
 import { ProductsModule } from './products/products.module';
 import { ProductsService } from './services/products.service';
+import { SingalsComponent } from './singals/singals.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { ProductsService } from './services/products.service';
     LoginComponent,
     AdminComponent,
     AsyncComponent,
+    SingalsComponent,
+    CartComponent,
   ],
   imports: [
     ProductsModule,
