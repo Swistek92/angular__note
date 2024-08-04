@@ -1,0 +1,27 @@
+@keyframes example {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    opacity: 4;
+    scale: 2;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(50px);
+  }
+}
+
+/* Przypisanie animacji do klasy */
+.animation {
+  height: 100%;
+  background-color: gray;
+  margin: 10px;
+  padding: 30px;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  /* animation-iteration-count: infinite; */
+}

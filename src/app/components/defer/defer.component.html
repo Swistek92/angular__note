@@ -1,0 +1,11 @@
+<div #showContent>
+  @defer (on viewport) {
+  <div class="animation">
+    <app-users></app-users>
+  </div>
+  }@placeholder{
+  <h1>loading</h1>
+  } @loading (minimum 800ms){
+  <h3 class="text-center p-2 m-2 fs-2">Loading Users...</h3>
+  }
+</div>

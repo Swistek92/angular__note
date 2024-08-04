@@ -1,0 +1,120 @@
+<div>
+  <h2>Role Selection</h2>
+  <select [(ngModel)]="employeeRole">
+    <option value="">Select Role</option>
+    <option value="Admin">Admin</option>
+    <option value="HR">HR</option>
+    <option value="Marketing">Marketing</option>
+    <option value="Developer">Developer</option>
+    <option value="Analyst">Analyst</option>
+  </select>
+
+  @switch(employeeRole){ @case('Admin'){
+  <h1>List of Employees</h1>
+  <h3>Selected Role: Admin</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Role</td>
+      </tr>
+    </thead>
+    <tbody>
+      @for(emp of employees(); track $index){ @if(emp.role === "Admin"){
+      <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.role }}</td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+  } @case('HR'){
+  <h1>List of Employees</h1>
+  <h3>Selected Role: HR</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Role</td>
+      </tr>
+    </thead>
+    <tbody>
+      @for(emp of employees(); track $index){ @if(emp.role === "HR"){
+      <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.role }}</td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+  } @case('Marketing'){
+  <h1>List of Employees</h1>
+  <h3>Selected Role: Marketing</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Role</td>
+      </tr>
+    </thead>
+    <tbody>
+      @for(emp of employees(); track $index){ @if(emp.role === "Marketing"){
+      <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.role }}</td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+  } @case('Developer'){
+  <h1>List of Employees</h1>
+  <h3>Selected Role: Developer</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Role</td>
+      </tr>
+    </thead>
+    <tbody>
+      @for(emp of employees(); track $index){ @if(emp.role === "Developer"){
+      <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.role }}</td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+  } @case('Analyst'){
+  <h1>List of Employees</h1>
+  <h3>Selected Role: Analyst</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Role</td>
+      </tr>
+    </thead>
+    <tbody>
+      @for(emp of employees(); track $index){ @if(emp.role === "Analyst"){
+      <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.role }}</td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+  } @default (){
+  <h3>Please select a role</h3>
+  } }
+</div>
