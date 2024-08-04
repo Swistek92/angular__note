@@ -6,6 +6,7 @@ import { LoopComponent } from './components/loop/loop.component';
 import { TestComponent } from './components/test/test.component';
 import { DeferComponent } from './components/defer/defer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DataComponent } from './components/data/data.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoopComponent,
     TestComponent,
     DeferComponent,
+    DataComponent,
     HttpClientModule,
   ],
   templateUrl: './app.component.html',
